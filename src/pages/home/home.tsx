@@ -1,9 +1,12 @@
 import React from 'react';
-
+import GlobalHeader from '@/components/GlobalHeader';
 
 function Home() {
   return (
-    <div>Home Page</div>
+    <div>
+      <GlobalHeader />
+      
+    </div>
   )
 }
 

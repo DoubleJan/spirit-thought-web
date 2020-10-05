@@ -1,3 +1,67 @@
+@import './../../colors.less';
+@import './../../fontFamily.less';
+
+// 最外层包裹
 .globalHeaderWrap {
-  color: #aaa;
+  display: flex;
+  justify-content: left;
+  padding: 1rem;
 }
+
+// 左侧标题
+.headerTitle {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: .2rem;
+  }
+  p {
+    color: @THEME_COLOR;
+    font-family: WGTitle;
+    font-size: 1.2rem;
+  }
+}
+
+// 导航
+.navigations {
+
+  margin-left: 3rem;
+
+  .navItem {
+    position: relative;
+    font-family: WGTitle;
+    font-size: 1.2rem;
+    padding-top: .28rem;
+  }
+
+  .navItem:hover {
+    color: @THEME_COLOR;
+    transition: all .2s;
+  }
+
+  // 下方伪类生成的小横线
+  .navItem:after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 100%;
+    display: inline-block;
+    transition: all .2s cubic-bezier(0.18, 0.89, 0.17, 0.88), opacity .15s ease;
+    opacity: 0;
+    transform: scaleX(0);
+    background-color: @THEME_COLOR;
+  }
+
+  .navItem:hover:after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+
+}
+
+

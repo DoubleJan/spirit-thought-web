@@ -1,4 +1,4 @@
-import Axios, { AxiosRequestConfig, ResponseType } from 'axios';
+import Axios, { AxiosRequestConfig } from 'axios';
 import Constants from '@/constants';
 import monitor from './monitor';
 
