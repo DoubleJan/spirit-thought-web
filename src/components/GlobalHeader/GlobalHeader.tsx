@@ -1,13 +1,15 @@
-import React, { useEffect } from 'react';
-import { getHomeMessage } from './GlobalHeader.Serv';
-
+import React, { useEffect, useState } from 'react';
+import { getHomeMessage } from './GlobalHeader.serv';
+import styles from './GlobalHeader.module.less';
 
 function GlobalHeader(props: any) {
+  const [msg, setMsg] = useState('');
   useEffect(() => {
-    const res = getHomeMessage({ p: 'p' });
-
+    getHomeMessage({ p: 'p' }).then((data) => {
+      setMsg(data);
+    });
   }, [])
-  return <div>GlobalHeader</div>
+  return <div className={styles.globalHeaderWrap}>GlobalHeader, {msg}</div>
 }
 
 export default GlobalHeader;

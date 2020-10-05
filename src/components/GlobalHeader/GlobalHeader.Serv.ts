@@ -10,6 +10,6 @@ export async function getHomeMessage(params: any) {
     }
   });
   if (res.code === '000000') {
-    console.log(res);
+    return res.data;
   }
 }
