@@ -12,7 +12,7 @@ interface EnvSetting {
 
 const Settings: EnvSetting = {
   development: {
-    baseURL: 'http://localhost:7001'
+    baseURL: 'http://localhost:7002'
   },
   production: {
     baseURL: 'http://spirithought.net/api/'

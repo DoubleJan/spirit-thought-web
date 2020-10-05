@@ -41,3 +41,7 @@ declare type RequestFunction = (params: RequestParams) => Response
 declare module 'constants.ts' {
   export default Setting;
 }
+
+declare module 'global.d.ts' {
+  
+}
