@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import GlobalHeader from '@/components/GlobalHeader';
+import GlobalFooter from '@/components/GlobalFooter';
 import ArticleList from './components/ArticleList';
 import { ArticleListType } from './components/components.d';
 import * as Serv from './articleList.serv';
@@ -61,6 +62,7 @@ function ArticlesList() {
       <div className={styles.articleListPageBodyWrap}>
         <ArticleList articleList={mockArticleList} />
       </div>
+      <GlobalFooter />
     </div>
   )
 }
