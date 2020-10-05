@@ -1,16 +1,26 @@
 import React from 'react';
-import GlobalHeader from '@/components/GlobalHeader';
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import Home from '@/pages/home';
+import ArticlesList from '@/pages/articlesList';
+import Article from '@/pages/article';
+
+import Exception from '@/pages/exceptions';
+
 
 function App() {
 
   return (
-    <div className="App">
-      <header className="App-header">
-        React APP
-        <GlobalHeader />
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact={true} component={Home} />
+        <Route path="/articlesList" exact={true} component={ArticlesList} />
+        <Route path="/article" component={Article} />
+        <Route path="*">
+          <Exception.Exception404 />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
