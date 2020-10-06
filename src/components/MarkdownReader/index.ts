@@ -26,7 +26,6 @@ interface Child {
 
 interface SingleHeadingProps {
   level: string;
-  id: string;
   child?: Child;
   [props: string]: any;
 }

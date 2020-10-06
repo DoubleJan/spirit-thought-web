@@ -1,4 +1,145 @@
+@import '../../colors.less';
+
+.markdownReaderWrap {
+  background-color: @BACKGROUND_COLOR;
+}
+
+// 卡片最外层包裹
+.markdownCardWrap {
+  margin-bottom: 4rem;
+}
+
+// 文章标题
+.contentTitle {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: @SPECIAL_TITLE_COLOR;
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
+  border-bottom: 1px solid @TABLE_BORDER;
+}
+
+// 二级标题
+.markdownCardTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1.6rem;
+}
+
+// 二级标题分割出的卡片
+.markdownCardBody {
+  background-color: #fff;
+  padding: 2rem 1.4rem;
+  box-shadow: 
+    0 1.6px 3.6px 0 rgba(0,0,0,.132), 
+    0 0.3px 0.9px 0 rgba(0,0,0,.108);
+}
+
+
+
+/********************************   markdown 解析出的标签样式   ******************************/
 
 .markdownReader {
+  color: @CONTENT_COLOR;
+  line-height: 1.6rem;
+  font-weight: 100;
+
+  h3 {
+    margin: 3rem 0 2rem;
+  }
+  :first-child {
+    margin-top: 0;
+  }
+  h3 span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: @TITLE_COLOR;
+  }
+
+  h4 {
+    margin: 2rem  0 1rem;
+  }
+  h4 span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: @TITLE_COLOR;
+  }
+
+  h5 {
+    margin: 1.4rem  0 .8rem;
+  }
+  h5 span {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: @TITLE_COLOR;
+  }
+
+  h6 {
+    margin: 1rem  0 .4rem;
+  }
+  h6 span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: @TITLE_COLOR;
+  }
+
+  // 无序列表
+  ol {
+    margin: 1rem 1.6rem;
+    li {
+      list-style-type: disc;
+      padding: .1rem;
+    }
+  }
+
+  // 代码块
+  figure {
+    margin: 1rem 0 2rem;
+  }
+
+  // 普通行
+  p {
+    margin: .4rem 0 .8rem;
+  }
+
+  // 表格
+  table {
+    border: solid 1px @TABLE_BORDER;
+    width: 100%;
+
+    td, th {
+      border: solid 1px @TABLE_BORDER;
+      padding: .6rem;
+      width: max-content;
+    }
+
+    th {
+      color: @TITLE_COLOR;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+  }
+
+  // 引用
+  blockquote {
+    background-color: @CODE_BLOCK_BG_COLOR;
+    border-left: .4rem solid @LINE_COLOR;
+    margin: 1rem 0;
+    padding: 1rem;
+    p, span, code {
+      margin: 0;
+    }
+  }
+
+  // 代码
+  code {
+    background-color: @THEME_COLOR_OPACITY;
+    padding: .14rem .4rem;
+    border-radius: .2rem;
+    color: @TITLE_COLOR;
+    margin: .3rem;
+  }
 
 }
+
+

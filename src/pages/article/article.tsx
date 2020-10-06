@@ -10,14 +10,13 @@ import styles from './article.module.less';
 function Article() {
   const location = useLocation();
   const [articleContent, setArticleContent] = useState('');
-  
+
   useEffect(() => {
     const articleId = location.pathname.split('/article/')[1];
     if (articleId) {
       console.log('articleId', articleId);
       Serv.getArticleContent({articleId}).then(res => {
         if (res.code === '000000') {
-          console.log('文章: ', res.data);
           setArticleContent(res.data);
         }
       });

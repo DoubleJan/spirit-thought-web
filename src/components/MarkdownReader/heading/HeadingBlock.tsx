@@ -9,10 +9,8 @@ function HeadingBlock(props: HeadingProps) {
   const { level, children } = props;
 
   if (level && Array.isArray(children) && children[0] && children[0].props) {
-    const value = children[0].props.value;
-    
     return (
-      <Heading level={`h${level}`} id={value} className={'reader-heading-wrap'}>
+      <Heading level={`h${level}`}>
         {/* <a href={`#${location.pathname}/${value}${location.search || ''}`}></a> */}
         <span>{children}</span>
       </Heading>
