@@ -8,6 +8,7 @@ const sqlType = {
   search: '查',
 }
 
+
 function SQLComponent({ type }: { type: SQLType }) {
 
   return (
@@ -20,7 +21,7 @@ function SQLComponent({ type }: { type: SQLType }) {
         </div>
         <div className={styles.formFieldWrap}>
           <h2>参数</h2>
-          <input type="text" />
+          <textarea rows={6} />
         </div>
         <button className={styles.submitSQL}>执行</button>
       </div>

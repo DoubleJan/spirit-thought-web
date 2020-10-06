@@ -9054,11 +9054,6 @@ react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-i
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-json-editor@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.npm.taobao.org/react-json-editor/download/react-json-editor-0.3.0.tgz#672dd7ce9b46c2696d6fab7e40547e9b4c220618"
-  integrity sha1-Zy3XzptGwmltb6t+QFR+m0wiBhg=
-
 react-markdown@^4.3.1:
   version "4.3.1"
   resolved "https://registry.npm.taobao.org/react-markdown/download/react-markdown-4.3.1.tgz#39f0633b94a027445b86c9811142d05381300f2f"

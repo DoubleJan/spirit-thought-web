@@ -20,14 +20,22 @@
 }
 
 .formFieldWrap {
-  input {
+  margin-bottom: 1rem;
+
+  input, textarea {
     width: calc(100% - 1.3rem);
     font-size: 1.1rem;
     padding: .6rem;
     border: 1px solid @TABLE_BORDER;
     margin-top: .6rem;
   }
-  margin-bottom: 1rem;
+
+  textarea {
+    font-family: Consolas, source-code-pro, Menlo, Monaco, 
+    "PingFang SC", "Segoe UI", "Microsoft YaHei", 
+    sans-serif, monospace;
+  }
+  
 }
 
 .submitSQL {
