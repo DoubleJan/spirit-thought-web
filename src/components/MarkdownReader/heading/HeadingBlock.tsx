@@ -2,12 +2,11 @@
 
 import React from 'react';
 import Heading from './Heading';
-import { useLocation } from 'react-router-dom'
 import { HeadingProps } from '..';
+
 
 function HeadingBlock(props: HeadingProps) {
   const { level, children } = props;
-  const location = useLocation();
 
   if (level && Array.isArray(children) && children[0] && children[0].props) {
     const value = children[0].props.value;
