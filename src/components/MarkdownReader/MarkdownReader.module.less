@@ -16,7 +16,7 @@
   color: @SPECIAL_TITLE_COLOR;
   padding-bottom: 1rem;
   margin-bottom: 4rem;
-  border-bottom: 1px solid @TABLE_BORDER;
+  border-bottom: 1px solid @COMMENT_COLOR;
 }
 
 // 二级标题
@@ -84,10 +84,19 @@
   }
 
   // 无序列表
-  ol {
+  ul {
     margin: 1rem 1.6rem;
     li {
       list-style-type: disc;
+      padding: .1rem;
+    }
+  }
+
+  // 有序列表
+  ol {
+    margin: 1rem 1.6rem;
+    li {
+      list-style-type: decimal;
       padding: .1rem;
     }
   }
@@ -126,7 +135,7 @@
     border-left: .4rem solid @LINE_COLOR;
     margin: 1rem 0;
     padding: 1rem;
-    p, span, code {
+    p, span {
       margin: 0;
     }
   }
