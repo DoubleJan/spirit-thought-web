@@ -22,7 +22,7 @@ function GlobalHeader() {
         <p>灵思</p>
       </div>
       <div className={styles.navigations}>
-        <p onClick={() => toggleRoute('/articlesList')} className={styles.navItem}>文章</p>
+        <p onClick={() => toggleRoute('/articlesList')} className={styles.navItem}>随笔</p>
       </div>
     </header>
   )
