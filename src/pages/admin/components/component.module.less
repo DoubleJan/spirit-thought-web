@@ -1,0 +1,61 @@
+@import '../../../colors.less';
+
+.SQLComponentWrap {
+  margin-bottom: 4rem;
+
+  h1 {
+    font-size: 1.8rem;
+    color: @SPECIAL_TITLE_COLOR;
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.SQLComponentBody {
+  background-color: #fff;
+  padding: 2.4rem 2rem 6rem;
+  box-shadow: 
+    0 1.6px 3.6px 0 rgba(0,0,0,.132), 
+    0 0.3px 0.9px 0 rgba(0,0,0,.108);
+}
+
+.formFieldWrap {
+  input {
+    width: calc(100% - 1.3rem);
+    font-size: 1.1rem;
+    padding: .6rem;
+    border: 1px solid @TABLE_BORDER;
+    margin-top: .6rem;
+  }
+  margin-bottom: 1rem;
+}
+
+.submitSQL {
+  margin-top: 1rem;
+  float: right;
+  padding: .6rem 2rem;
+  color: #fff;
+  border: none;
+  outline:none;
+  background-color: @THEME_COLOR;
+  border-radius: .1rem;
+  cursor: pointer;
+}
+
+.submitSQL:not(:active) {
+  background-color: @THEME_COLOR;
+  border-radius: .1rem;
+  transition: .2s all;
+}
+
+.submitSQL:hover {
+  background-color: @THEME_LIGHT_COLOR;
+  border-radius: 2rem;
+  transition: .2s all;
+}
+
+.submitSQL:active {
+  background-color: @THEME_DEEP_COLOR;
+  transition: .2s all;
+}
+
