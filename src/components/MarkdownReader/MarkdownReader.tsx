@@ -34,7 +34,9 @@ function MarkdownReader({ content }: { content: string }) {
 
   return (
     <div className={styles.markdownReaderWrap}>
-      <h1 className={styles.contentTitle}>{contentTitle || ''}</h1>
+      {
+        contentTitle && <h1 className={styles.contentTitle}>{contentTitle || ''}</h1>
+      }
       {
         cardBodys.map((body, index) => {
           return (

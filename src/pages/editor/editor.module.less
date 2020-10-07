@@ -1,0 +1,86 @@
+@import '../../colors.less';
+
+
+.editorPageHeader {
+  height: 2rem;
+  background-color: @DEEP_BACKGROUND_COLOR;
+  display: flex;
+  justify-content: space-between;
+}
+
+.docTitle {
+  height: 100%;
+  color: @COMMENT_COLOR;
+  font-weight: 200;
+  padding: .24rem 1rem;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.hasTitle {
+  color: @SPECIAL_TITLE_COLOR;
+}
+
+.rightNavWrap {
+  display: flex;
+  justify-content: right;
+
+  p {
+    padding: .24rem;
+    color: @COMMENT_COLOR;
+    font-weight: 200;
+    width: 9rem;
+    // margin-right: 1rem;
+  }
+
+  button {
+    outline: none;
+    border: none;
+    padding: .24rem 1rem;
+  }
+
+  // 主题色按钮
+  .submitButton {
+    background-color: @THEME_COLOR;
+    color: #fff;
+  }
+
+  .submitButton:not(:active) {
+    background-color: @THEME_COLOR;
+    transition: .2s all;
+  }
+
+  .submitButton:hover {
+    background-color: @THEME_LIGHT_COLOR;
+    transition: .2s all;
+  }
+
+  .submitButton:active {
+    background-color: @THEME_DEEP_COLOR;
+    transition: .2s all;
+  }
+
+
+  // 普通文字按钮
+  .textButton {
+    color: @TITLE_COLOR;
+    font-weight: 200;
+    background-color: @DEEP_BACKGROUND_COLOR;
+  }
+
+  .textButton:not(:active) {
+    background-color: @DEEP_BACKGROUND_COLOR;
+    transition: .2s all;
+  }
+
+  .textButton:hover {
+    background-color: #eaeaea;;
+    transition: .2s all;
+  }
+
+  .textButton:active {
+    background-color: #e0e0e0;
+    transition: .2s all;
+  }
+  
+}
