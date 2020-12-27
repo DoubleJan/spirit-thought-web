@@ -15,10 +15,8 @@ function Article() {
     const articleId = location.pathname.split('/article/')[1];
     if (articleId) {
       console.log('articleId', articleId);
-      Serv.getArticleContent({articleId}).then(res => {
-        if (res.code === '000000') {
-          setArticleContent(res.data);
-        }
+      Serv.getArticleContent({articleId}).then((res: any) => {
+        setArticleContent(res)
       });
     }
   }, []);

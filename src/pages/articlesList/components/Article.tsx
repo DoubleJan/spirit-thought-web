@@ -13,9 +13,9 @@ function Article({ article }: { article: ArticleData }) {
   const history = useHistory();
 
   return (
-    <div className={styles.articleWrap} onClick={() => history.push(`/article/${article.articleId}`)}>
+    <div className={styles.articleWrap} onClick={() => history.push(`/article/${article._id}`)}>
       <div className={styles.articleTitle}>
-        <p>{article.title || '--'}</p>
+        <p>{article.name || '--'}</p>
       </div>
       <div className={styles.articleDesc}>{article.description || '--'}</div>
       <div className={styles.bottomDetail}>

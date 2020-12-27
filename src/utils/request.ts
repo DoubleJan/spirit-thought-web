@@ -2,14 +2,14 @@ import Axios, { AxiosRequestConfig } from 'axios';
 import Constants from '@/constants';
 import monitor from './monitor';
 
-export default async function request(params: RequestParams): Promise<ResponseData> {
-  const { url, method, data, headers = {}, responseType = 'json', ...options } = params;
+export default async function request(params: RequestParams): Promise<any> {
+  const { url, method, data, headers = {}, responseType = 'json', baseURL, ...options } = params;
   const _method: Method = method.toLowerCase() as Method;
 
   const config: AxiosRequestConfig = {
     timeout: 10000,
     url,
-    baseURL: Constants.baseURL,
+    baseURL: baseURL || Constants.baseURL,
     responseType,
     headers,
     ...options

@@ -25,42 +25,42 @@ const mockArticleList: ArticleListType = [
     createTime: '2020-01-29T15:32:47',
     description: 'MVue3.0入门，真滴强强强强强强强强强强，超值优惠哈哈哈哈哈哈哈'
   },
-  // {
-  //   id: 'id2321',
-  //   articleId: 'react',
-  //   title: 'React Hooks 起步之 useEffect，useStates，和自定义 Hooks',
-  //   directoryName: 'React',
-  //   author: '大师兄带带我',
-  //   createTime: '2010-11-29T15:32:47',
-  //   description: 'React Hooks 起步之 useEffect，useStates，和自定义 Hooks轻松入门，真滴强强强强强强强强强强，超值优惠哈哈哈哈哈哈哈'
-  // },
-  // {
-  //   id: '9087',
-  //   articleId: '6',
-  //   title: 'Egg 2.X源码分析',
-  //   directoryName: 'NodeJs',
-  //   author: 'yangw',
-  //   createTime: '2020-01-29T15:32:47',
-  //   description: 'Egg 2.X源码分析，真滴强强强强强强强强强强，超值优惠哈哈哈哈哈哈哈'
-  // },
+  {
+    id: 'id2321',
+    articleId: 'react',
+    title: 'React Hooks 起步之 useEffect，useStates，和自定义 Hooks',
+    directoryName: 'React',
+    author: '大师兄带带我',
+    createTime: '2010-11-29T15:32:47',
+    description: 'React Hooks 起步之 useEffect，useStates，和自定义 Hooks轻松入门，真滴强强强强强强强强强强，超值优惠哈哈哈哈哈哈哈'
+  },
+  {
+    id: '9087',
+    articleId: '6',
+    title: 'Egg 2.X源码分析',
+    directoryName: 'NodeJs',
+    author: 'yangw',
+    createTime: '2020-01-29T15:32:47',
+    description: 'Egg 2.X源码分析，真滴强强强强强强强强强强，超值优惠哈哈哈哈哈哈哈'
+  },
 ]
 
 function ArticlesList() {
-  // const [articleList, setArticleList] = useState([]);
+  const [articleList, setArticleList] = useState([]);
 
-  // useEffect(() => {
-  //   Serv.getArticlesList().then(res => {
-  //     if (res.code === '000000' && Array.isArray(res.data)) {
-  //       setArticleList(res.data as []);
-  //     }
-  //   })
-  // }, []);
+  useEffect(() => {
+    Serv.getArticlesList().then(res => {
+      if (res.code === '000000' && Array.isArray(res.data)) {
+        setArticleList(res.data as []);
+      }
+    })
+  }, []);
 
   return (
     <div className={styles.articlesListOuterWrap}>
       <GlobalHeader />
       <div className={styles.articleListPageBodyWrap}>
-        <ArticleList articleList={mockArticleList} />
+        <ArticleList articleList={articleList} />
       </div>
       <GlobalFooter />
     </div>

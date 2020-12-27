@@ -10,7 +10,7 @@ function ArticleList({ articleList }: { articleList: ArticleListType }) {
     <div className={styles.articleListWrap}>
       {
         articleList.map((article: ArticleData) => (
-          <Article article={article} key={article.id} />
+          <Article article={article} key={article._id} />
         ))
       }
     </div>

@@ -13,11 +13,13 @@ interface EnvSetting {
 
 const Settings: EnvSetting = {
   development: {
-    baseURL: 'http://localhost:7001',
+    baseURL: 'http://localhost:7002',
+    fileURL: 'http://spirithought.net',
     saveEdit: 'SPT_LOCAL_SAVE_EDIT',
   },
   production: {
     baseURL: 'http://spirithought.net/api/',
+    fileURL: 'http://spirithought.net',
     saveEdit: 'SPT_PROD_SAVE_EDIT',
   }
 }
